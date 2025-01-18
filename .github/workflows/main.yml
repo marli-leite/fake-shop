@@ -18,14 +18,14 @@ jobs:
          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
      - name: Construção e envio da imagem Docker
-        uses: docker/build-push-action@v6
-        with:
-          context: ./src 
-          push: true
-          file: ./src/Dockerfile
-          tags: |
-            marlileite/fake-shop:latest
-            marlileite/fake-shop:latest:v${{ github.run_number }}
+       uses: docker/build-push-action@v6
+       with:
+         context: ./src 
+         push: true
+         file: ./src/Dockerfile
+         tags: |
+           marlileite/fake-shop:latest
+           marlileite/fake-shop:latest:v${{ github.run_number }}
 
   cd:
     runs-on: ubuntu-latest
