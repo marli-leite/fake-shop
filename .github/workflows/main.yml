@@ -13,9 +13,9 @@ jobs:
      
      - name: Autenticar no Docker Hub
        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+       with:
+         username: ${{ secrets.DOCKERHUB_USERNAME }}
+         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
      - name: Construção da imagem Docker
        run: echo "Executando o comando Docker build"
